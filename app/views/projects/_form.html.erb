@@ -1,0 +1,8 @@
+<%= error_messages_for 'project' %>
+<% if @project.name_restriction?
+%>
+  <%= render :partial => 'form_student', :locals => { :f => f }  %>
+<% else %>
+ <%= render :partial => 'form_normal', :locals => { :f => f }  
+%>
+<% end %>
